@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const isLoggedIn = localStorage.getItem("token");
+    const isLoggedIn = localStorage.getItem('token');
 
     return (
         <div className='header'>
@@ -13,9 +13,11 @@ const Header = () => {
             </div>
             <div>
                 <Link to='/login'>LOGIN</Link>
-                <Link to='/friends_list'>FRIENDS LIST</Link>
-                <Link to='/add_friend'>ADD FRIEND</Link>
-                <Link to='/logout'>LOGOUT</Link>
+                {isLoggedIn && <>
+                    <Link to='/friends'>FRIENDS LIST</Link>
+                    <Link to='/friends/add'>ADD FRIEND</Link>
+                    <Link to='/logout'>LOGOUT</Link>
+                </>}
             </div>
         </div>
     );

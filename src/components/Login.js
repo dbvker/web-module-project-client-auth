@@ -8,6 +8,7 @@ const initialCredentials = {
 };
 
 const Login = () => {
+    const { push } = useHistory();
     const [credentials, setCredentials] = useState(initialCredentials);
     let history = useHistory();
 
@@ -19,10 +20,10 @@ const Login = () => {
                 localStorage.setItem("token", resp.data.token);
                 localStorage.setItem("username", resp.data.username);
                 localStorage.setItem("role", resp.data.role);
-                history.push("/friends_list");
+                push("/friends");
             })
             .catch(err => {
-                console.log(`couldn't log in: ${err}`)
+                console.log(err);
             })
     };
 
@@ -39,23 +40,21 @@ const Login = () => {
                 <h1>LOGIN</h1>
             </center>
             <label>
-                <strong>Username:</strong>
+                Username:
                 <input
                     type='text'
                     name='username'
                     value={credentials.username}
                     onChange={handleChange}
-                    placeholder='Username'
                 />
             </label>
             <label>
-                <strong>Password:</strong>
+                Password:
                 <input
                     type='password'
                     name='password'
                     value={credentials.password}
                     onChange={handleChange}
-                    placeholder='Password'
                 />
             </label>
             <button>Login</button>

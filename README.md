@@ -53,25 +53,25 @@ Each friend object has the format:
 * [x ] In your login component, add code to your submission code the ability to redirect to your friendslist component.
 
 #### Build the addFriends component
-* [ ] Use the [mockup provided](./addfriends_mockup.png) to build out a simple component allowing you to collect data to add in a new friend.
-* [ ] The component should include a form with inputs for each friend attribute and a submit button.
-* [ ] When submitting the form, make a call to the approprate api endpoint with your new friend data. Remember that this is a protected route.
-* [ ] In `App.js`, add a route to allow this component to be displayed when navigating to `/friends/add`.
+* [x ] Use the [mockup provided](./addfriends_mockup.png) to build out a simple component allowing you to collect data to add in a new friend.
+* [x ] The component should include a form with inputs for each friend attribute and a submit button.
+* [x ] When submitting the form, make a call to the appropriate api endpoint with your new friend data. Remember that this is a protected route.
+* [x ] In `App.js`, add a route to allow this component to be displayed when navigating to `/friends/add`.
 
 #### Build a logout button
-* [ ] Build out a simple component allowing you to logout of your application cleanly.
-* [ ] The component should make a call to the logout endpoint and remove the token on local storage by default.
-* [ ] In `App.js`, add a route to allow this component to be displayed when navigating to `/logout`.
-* [ ] In `App.js`, create a navigation bar that allows the user to redirect to logout, friendslist or add friend.
+* [x ] Build out a simple component allowing you to logout of your application cleanly.
+* [x ] The component should make a call to the logout endpoint and remove the token on local storage by default.
+* [x ] In `App.js`, add a route to allow this component to be displayed when navigating to `/logout`.
+* [x ] In `App.js`, create a navigation bar that allows the user to redirect to logout, friendslist or add friend.
 
 #### Build the a PrivateRoute component
-* [ ] Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
-* [ ] Use your protected route to restrict access to your `/friends` and `/friends/add` routes.
+* [x ] Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
+* [x ] Use your protected route to restrict access to your `/friends` and `/friends/add` routes.
 
 ### Task 3: Stretch goals
-- [ ] Add in a modularized way to access protected endpoints using axiosWithAuth.
-- [ ] Add in a protected page and route that allows shows an information friends information. Use url params to get the id for this friend.
-- [ ] Style as you wish.
+- [x ] Add in a modularized way to access protected endpoints using axiosWithAuth.
+- [x ] Add in a protected page and route that allows shows an information friends information. Use url params to get the id for this friend.
+- [x ] Style as you wish.
 
 ### Submission Format
 - [ ] If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
